@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "rest api",
   "main": "index.js",
+  "engine": {
+    "node": "8.9.4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "rm -rf ./dist && babel -d ./dist ./src -s && node dist/main.js",
+    "dev": "nodemon dev.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +20,18 @@
   "bugs": {
     "url": "https://github.com/Sun1ive/my-node-koa-mail/issues"
   },
-  "homepage": "https://github.com/Sun1ive/my-node-koa-mail#readme"
+  "homepage": "https://github.com/Sun1ive/my-node-koa-mail#readme",
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "koa": "^2.4.1",
+    "koa-body": "^2.5.0",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^7.4.0",
+    "nodemailer": "^4.4.2",
+    "nodemon": "^1.14.12"
+  }
 }
