@@ -4,6 +4,7 @@ const KoaCors = require('@koa/cors');
 const KoaMorgan = require('koa-morgan');
 const KoaRouter = require('koa-router');
 const config = require('./config/config');
+const mailRoutes = require('./api/routes/mail');
 
 const app = new Koa();
 const router = new KoaRouter();
@@ -13,5 +14,6 @@ app.use(KoaMorgan('combined'));
 app.use(KoaCors());
 
 app.use(router.allowedMethods());
+app.use(mailRoutes.routes());
 
 app.listen(config.port, () => console.log(`Server is running at port ${config.port}`))
