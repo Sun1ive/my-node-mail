@@ -8,7 +8,9 @@
   },
   "scripts": {
     "start": "rm -rf ./dist && babel -d ./dist ./src -s && node dist/main.js",
-    "dev": "nodemon src/main.js"
+    "dev": "nodemon src/main.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -32,12 +34,14 @@
     "koa-morgan": "^1.0.1",
     "koa-router": "^7.4.0",
     "nodemailer": "^4.4.2",
-    "nodemon": "^1.14.12"
+    "nodemon": "^1.14.12",
+    "snyk": "^1.114.0"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0"
-  }
+  },
+  "snyk": true
 }
