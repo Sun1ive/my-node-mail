@@ -30,9 +30,9 @@
     "koa": "^2.4.1",
     "koa-body": "^2.5.0",
     "koa-morgan": "^1.0.1",
-    "koa-router": "^7.4.0",
+    "koa-router": "^11.0.2",
     "nodemailer": "^4.4.2",
-    "nodemon": "^1.14.12"
+    "nodemon": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^4.17.0",
